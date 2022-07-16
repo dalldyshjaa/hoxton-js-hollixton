@@ -24,14 +24,30 @@ header {
 .filter-section > * {
   color: rgb(49, 49, 104);
 }
+.bag {
+  position: relative;
+}
 .right-side-icon {
   font-size: 40px;
   height: 30px;
   width: 30px;
 }
+.bag-count {
+  position: absolute;
+  background-color: red;
+  border-radius: 50%;
+  height: 21px;
+  width: 21px;
+  color: white;
+  text-align: center;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
 a {
   text-decoration: none;
   color: black;
+  z-index: 101;
+  cursor: pointer;
 }
 main {
   display: grid;
@@ -42,6 +58,35 @@ main {
   row-gap: 58px;
   margin-top: 24px;
 }
+.single-prod-main {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: auto auto;
+  gap: 20px;
+  width: 100%;
+  height: 1050px;
+  justify-content: center;
+}
+.single-prod-image {
+  height: 1050px;
+}
+.single-prod-info-container {
+  width: 400px;
+  font-family: roboto;
+  font-size: 30px;
+}
+.single-prod-addToBag {
+  margin-top: 15px;
+  font-family: roboto;
+  font-size: 15px;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: blue;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
 .product {
   display: grid;
   gap: 14px;
@@ -67,4 +112,70 @@ main {
   z-index: 100;
   height: 100%;
   width: 100%;
+}
+footer {
+  width: 100%;
+  background-color: grey;
+  height: 70px;
+}
+.footer-item-container {
+  width: 100%;
+  margin-top: 30px;
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-between;
+  height: 70px;
+  padding: 10px 50px;
+  background-color: grey;
+  align-items: center;
+  color: white;
+}
+.modal {
+  height: calc(100% - 120px);
+  width: calc(100% - 100px);
+  position: absolute;
+  background-color: rgba(128, 128, 128, 0.326);
+  z-index: 200;
+  display: grid;
+  place-content: center;
+  place-items: center;
+}
+.no-modal {
+  display: none;
+}
+.modal-content {
+  /* height: 500px; */
+  /* width: 500px; */
+  min-width: 400px;
+  border-radius: 20px;
+  background-color: white;
+  position: relative;
+  padding: 30px;
+}
+.cancel-modal {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  position: absolute;
+  margin-left: 85%;
+  margin-top: -4%;
+  cursor: pointer;
+}
+.search-input {
+  margin-top: 20px;
+  width: 100%;
+  height: 40px;
+  border-radius: 15px;
+  border: 1px solid blue;
+  padding: 10px;
+}
+.pay-now {
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  background-color: blue;
+  border-radius: 15px;
+  color: white;
+  border: none;
+  margin-top: 20px;
 }
